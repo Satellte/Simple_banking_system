@@ -3,6 +3,10 @@ package Modified.DAO;
 import java.sql.SQLException;
 
 public class Bank extends AbstractDatabase {
+    public Bank(String url, String user, String password) throws SQLException {
+        super(url, user, password);
+    }
+
     /**
      * @throws SQLException
      */
