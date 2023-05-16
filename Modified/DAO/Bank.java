@@ -1,115 +1,29 @@
 package Modified.DAO;
-
 import java.sql.SQLException;
 
 public class Bank extends AbstractDatabase {
+
     public Bank(String url, String user, String password) throws SQLException {
         super(url, user, password);
     }
-
-    /**
-     * @throws SQLException
-     */
-    @Override
-    public void createTable() throws SQLException {
-
+    public Bank(String url) throws SQLException {
+        super(url);
     }
 
-    /**
-     * @param cardNumber
-     * @param pin
-     * @throws SQLException
-     */
     @Override
-    public void addAccount(String cardNumber, String pin) throws SQLException {
-
+    public void doSomething() throws SQLException {
+        // выполняем операции с базой данных
+        // ...
     }
 
-    /**
-     * @param cardNumber
-     * @param pin
-     * @return
-     * @throws SQLException
-     */
-    @Override
-    public boolean checkExistInBase(String cardNumber, String pin) throws SQLException {
-        return false;
-    }
+    // Метод для демонстрации использования MyDatabase
+    public static void main(String[] args) throws SQLException {
+        String url = "jdbc:mysql://localhost:3306/mydatabase";
+        String user = "myusername";
+        String password = "mypassword";
 
-    /**
-     * @param cardNumber
-     * @return
-     * @throws SQLException
-     */
-    @Override
-    public boolean checkTransferCardExistInBase(String cardNumber) throws SQLException {
-        return false;
-    }
-
-    /**
-     * @param cardNumber
-     * @throws SQLException
-     */
-    @Override
-    public void printBalance(String cardNumber) throws SQLException {
-
-    }
-
-    /**
-     * @param cardNumber
-     * @param amount
-     * @return
-     * @throws SQLException
-     */
-    @Override
-    public boolean checkBalance(String cardNumber, int amount) throws SQLException {
-        return false;
-    }
-
-    /**
-     * @param cardNumber
-     * @throws SQLException
-     */
-    @Override
-    public void addIncome(String cardNumber) throws SQLException {
-
-    }
-
-    /**
-     * @param cardNumber
-     * @param amount
-     * @throws SQLException
-     */
-    @Override
-    public void decreaseBalance(String cardNumber, int amount) throws SQLException {
-
-    }
-
-    /**
-     * @param cardNumber
-     * @param amount
-     * @throws SQLException
-     */
-    @Override
-    public void transferAmount(String cardNumber, int amount) throws SQLException {
-
-    }
-
-    /**
-     * @param cardNumber
-     * @throws SQLException
-     */
-    @Override
-    public void doTransfer(String cardNumber) throws SQLException {
-
-    }
-
-    /**
-     * @param cardNumber
-     * @throws SQLException
-     */
-    @Override
-    public void closeAccount(String cardNumber) throws SQLException {
-
+        MyDatabase db = new MyDatabase(url, user, password);
+        db.doSomething();
+        db.close();
     }
 }
