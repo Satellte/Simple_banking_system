@@ -19,7 +19,6 @@ public static String pathToBase;
 
     /**
      * connect set connection to database
-     * @throws SQLException
      */
     public static void connect() throws SQLException {
         String url = "jdbc:sqlite:" + pathToBase;
@@ -29,7 +28,6 @@ public static String pathToBase;
     /**
      * queryForCreateTable create query for create table HyperSkill
      * with columns CardNumber, pin and balance
-     * @throws SQLException
      */
     public static void queryForCreateTable() throws SQLException{
         String query = "CREATE TABLE IF NOT EXISTS HyperSkill (CardNumber VARCHAR(16), " +
@@ -42,7 +40,6 @@ public static String pathToBase;
      * queryForAddAccount create query for add account to the database
      * @param cardNumber is new generated valid card number
      * @param pin is new generated pin for card number
-     * @throws SQLException
      */
     public static void queryForAddAccount(String cardNumber, String pin) throws SQLException{
         String query = "INSERT INTO HyperSkill (CardNumber, Pin, Balance) VALUES " +
@@ -55,7 +52,6 @@ public static String pathToBase;
      * @param cardNumber is logged card number
      * @param pin is pin for logged card number
      * @return boolean answer of existing this card number and pin in database
-     * @throws SQLException
      */
     public static boolean queryCheckingCardAndPinInBase(String cardNumber, String pin) throws SQLException {
         boolean exist = false;
@@ -73,7 +69,6 @@ public static String pathToBase;
     /**
      * queryForPrintBalance create query for checking balance
      * @param cardNumber is logged card number
-     * @throws SQLException
      */
     public static void queryForPrintBalance(String cardNumber) throws SQLException {
         long balance;
@@ -84,9 +79,7 @@ public static String pathToBase;
 
     /**
      * returnBalance return current balance
-     * @param query
      * @return balance
-     * @throws SQLException
      */
     public static long returnBalance(String query) throws SQLException {
         long balance = 0;
@@ -104,7 +97,6 @@ public static String pathToBase;
      * queryToAddIncome is create query to add income
      * @param cardNumber is logged card number
      * @param income is amount of income
-     * @throws SQLException
      */
     public static void queryToAddIncome(String cardNumber, long income) throws SQLException {
         String query = "UPDATE HyperSkill " +
@@ -119,7 +111,6 @@ public static String pathToBase;
      * @param cardNumber is logged card number
      * @param recipientsCard is receiver's card number
      * @param amountToTransfer is account for transfer
-     * @throws SQLException
      */
     public static void doTransfer(String cardNumber, String recipientsCard, String amountToTransfer) throws SQLException {
         String decreaseAmount = "UPDATE HyperSkill " +
@@ -140,7 +131,6 @@ public static String pathToBase;
      * queryCheckingCardInBase is created query for checking card in base
      * @param cardNumber entered card number
      * @return boolean answer of existing of entered card number
-     * @throws SQLException
      */
     public static boolean queryCheckingCardInBase(String cardNumber) throws SQLException {
         boolean exist = false;
@@ -160,7 +150,6 @@ public static String pathToBase;
      * @param currentCard is entered card number
      * @param amountToTransfer is entered amount to transfer
      * @return boolean answer of existing amount
-     * @throws SQLException
      */
     public static boolean queryCheckAvailableAmount(String currentCard, long amountToTransfer) throws SQLException {
         boolean enough = false;
@@ -178,7 +167,6 @@ public static String pathToBase;
     /**
      * makeInjection is make injection of query to database
      * @param query some query
-     * @throws SQLException
      */
     public static void makeInjection(String query) throws SQLException {
         if (connection != null) {
@@ -191,9 +179,7 @@ public static String pathToBase;
 
     /**
      * checkingBase is checking any query in database
-     * @param query
      * @return boolean answer of query
-     * @throws SQLException
      */
     public static boolean checkingBase(String query) throws SQLException {
         boolean done = false;
@@ -209,7 +195,6 @@ public static String pathToBase;
 
     /**
      * closeConnection is closing connection with database
-     * @throws SQLException
      */
     public static void closeConnection() throws SQLException {
         if (connection != null) {

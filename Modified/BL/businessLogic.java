@@ -15,7 +15,6 @@ public class businessLogic {
      * mainMenuSelection depending on the user's choice
      * calls the methods of card generation and pin or login invitation
      * @param select is user's selection
-     * @throws SQLException
      */
     public static void mainMenuSelection(int select) throws SQLException {
         switch (select) {
@@ -35,7 +34,6 @@ public class businessLogic {
     /**
      * createAccount calls the method for generating the card and pin,
      * and then calls the method for writing the generated data to the database
-     * @throws SQLException
      */
     static void createAccount() throws SQLException {
         String cardNumber = generateValidCardNumber();
@@ -105,8 +103,6 @@ public class businessLogic {
 
     /**
      * calculateLuhnDigit is calculated last sixteenth digit of card number for validate
-     * @param cardNumber
-     * @return
      */
     public static int calculateLuhnDigit(String cardNumber) {
         int sum = 0;
@@ -131,9 +127,6 @@ public class businessLogic {
 
     /**
      * loginMenuSelection depending on the user's choice calls the methods of manipulation with account
-     * @param currentCard
-     * @param selection
-     * @throws SQLException
      */
     public static void loginMenuSelection(String currentCard, int selection) throws SQLException {
         switch (selection) {
