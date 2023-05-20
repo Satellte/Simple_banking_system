@@ -1,14 +1,18 @@
 package Modified;
 
-import Modified/DAO/Bank.java;
+import java.sql.SQLException;
+import static Modified.DAO.Bank.*;
+import static Modified.DI.DisplayInterface.printMainMenu;
 
 public class Main {
-    public static void main(String[] args) {
-        String url = "jdbc:sqlite:/home/kwizard/IdeaProjects/Simple Banking System (Java)" +
+    public static void main(String[] args) throws SQLException {
+        String url = "/home/kwizard/IdeaProjects/Simple Banking System (Java)" +
                 "/Simple Banking System (Java)/task/" + args[1];
-
-        Bank(url);
-        doSomething();
-        showMenu();
+        setUrlToBase(url);
+        connect();
+        queryForCreateTable();
+        closeConnection();
+        printMainMenu();
     }
 }
+
