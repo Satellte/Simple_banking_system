@@ -5,7 +5,18 @@ import java.util.Random;
 import static Modified.DAO.Bank.*;
 import static Modified.DI.DisplayInterface.*;
 
+/**
+ * businessLogic is a class that performs data generation,
+ * validation, switching between different menus
+ * and calling methods for database operation
+ */
 public class businessLogic {
+    /**
+     * mainMenuSelection depending on the user's choice
+     * calls the methods of card generation and pin or login invitation
+     * @param select is user's selection
+     * @throws SQLException
+     */
     public static void mainMenuSelection(int select) throws SQLException {
         switch (select) {
             case 1 -> createAccount();
@@ -20,6 +31,12 @@ public class businessLogic {
             }
         }
     }
+
+    /**
+     * createAccount calls the method for generating the card and pin,
+     * and then calls the method for writing the generated data to the database
+     * @throws SQLException
+     */
     static void createAccount() throws SQLException {
         String cardNumber = generateValidCardNumber();
         StringBuilder pin = new StringBuilder();
@@ -35,6 +52,11 @@ public class businessLogic {
         closeConnection();
         printMainMenu();
     }
+
+    /**
+     * generateValidCardNumber returns valid new card number
+     * @return 16 digit of new valid card number
+     */
     public static String generateValidCardNumber() {
         String cardNumber;
         boolean isValid;
@@ -44,6 +66,11 @@ public class businessLogic {
         } while (!isValid);
         return cardNumber;
     }
+
+    /**
+     * generateCardNumber generates first fifteenth digits of the new card number
+     * @return 16 digit of new card number
+     */
     public static String generateCardNumber() {
         Random random = new Random();
         StringBuilder builder = new StringBuilder("400000");
@@ -53,6 +80,12 @@ public class businessLogic {
         builder.append(calculateLuhnDigit(builder.toString()));
         return builder.toString();
     }
+
+    /**
+     * validateCardNumber is validate new generated card number
+     * @param cardNumber is generated 16 digits of new card number
+     * @return 16 digits of new generated card number
+     */
     public static boolean validateCardNumber(String cardNumber) {
         int sum = 0;
         boolean alternate = false;
@@ -69,6 +102,12 @@ public class businessLogic {
         }
         return (sum % 10 == 0);
     }
+
+    /**
+     * calculateLuhnDigit is calculated last sixteenth digit of card number for validate
+     * @param cardNumber
+     * @return
+     */
     public static int calculateLuhnDigit(String cardNumber) {
         int sum = 0;
         boolean alternate = false;
@@ -89,6 +128,13 @@ public class businessLogic {
         }
         return 10 - remainder;
     }
+
+    /**
+     * loginMenuSelection depending on the user's choice calls the methods of manipulation with account
+     * @param currentCard
+     * @param selection
+     * @throws SQLException
+     */
     public static void loginMenuSelection(String currentCard, int selection) throws SQLException {
         switch (selection) {
             case 1 -> {
