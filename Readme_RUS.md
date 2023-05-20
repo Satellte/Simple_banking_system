@@ -7,36 +7,8 @@ https://hyperskill.org/projects/93?category=2&track=12
 - [Описание](#описание)
 - [Особенности](#особенности)
 - [Использование](#использование)
-- [Обратная связь] (#обратная связь)2. Follow the on-screen instructions: The program will display a menu with different options. Enter the corresponding number to perform the desired action.
-3. 
-## Feedback
-During this project, I learned about the functioning of a banking system and gained knowledge about SQL and databases. Understanding how the Luhn algorithm works was particularly valuable in preventing errors when entering card numbers. Additionally, I grasped basic object-oriented programming concepts, such as working with classes.
-
-While working on the project, I encountered a few difficulties. Setting up and connecting to the database required some effort, but I was able to overcome it by studying the documentation and seeking guidance from online resources. Designing the system to handle various banking operations and ensuring data security also posed challenges, but careful planning and research helped me overcome these obstacles.
-
-Overall, this project provided me with a practical understanding of banking systems and allowed me to develop my skills in working with databases, SQL, and object-oriented programming. It was a valuable learning experience that enhanced my knowledge and problem-solving abilities.
-
-## Contributing
-Contributions to the Simple Banking System project are welcome. If you would like to contribute, please follow these guidelines:
-
-1. Fork the repository.
-2. Create a new branch for your feature or bug fix.
-3. Make your modifications.
-4. Test your changes to ensure they work as intended.
-5. Commit your changes and push them to your forked repository.
-6. Submit a pull request, describing the changes you made and their purpose.
-
-## Dependencies
-The Simple Banking System project has the following dependencies:
-
-1. Java Development Kit (JDK): Ensure that you have a compatible JDK installed. Make sure you have JDK version 17.0 or higher installed. You can download the latest JDK from the [official Oracle website](https://www.oracle.com/java/technologies/downloads/#java17).
-2. SQLite JDBC Driver: Obtain the driver from a reliable source and include it in the project's classpath. The recommended version is 3.41.2. You can download the JDBC driver from the [SQLite JDBC Driver website](https://github.com/xerial/sqlite-jdbc/releases) or include it as a Maven/Gradle dependency.
-
-## Contact Information
-If you have any questions or concerns regarding the Simple Banking System project, please contact the project maintainer:
-- Name: ```Serik Makzhanov```
-- Email: ```serik.makzhanov@gmail.com```
-- [Внесение вклада](#внесение вклада)
+- [Обратная связь] (#обратная связь)
+- [Для тех, кто хочет внести вклад в программу](#Для тех, кто хочет внести вклад в программу)
 - [Зависимости](#зависимости)
 - [Контактная информация](#контактная информация)
 
@@ -73,35 +45,7 @@ Main-Class: Main
 ### Чтобы запустить JAR-файл, выполните следующие действия:
 1. Запустите JAR-файл: Введите следующую команду для запуска JAR-файла:
 ```shell
-java -jar Project5SimpleBankingSystem-1.0-SNAPSHOT.jar2. Follow the on-screen instructions: The program will display a menu with different options. Enter the corresponding number to perform the desired action.
-3. 
-## Feedback
-During this project, I learned about the functioning of a banking system and gained knowledge about SQL and databases. Understanding how the Luhn algorithm works was particularly valuable in preventing errors when entering card numbers. Additionally, I grasped basic object-oriented programming concepts, such as working with classes.
-
-While working on the project, I encountered a few difficulties. Setting up and connecting to the database required some effort, but I was able to overcome it by studying the documentation and seeking guidance from online resources. Designing the system to handle various banking operations and ensuring data security also posed challenges, but careful planning and research helped me overcome these obstacles.
-
-Overall, this project provided me with a practical understanding of banking systems and allowed me to develop my skills in working with databases, SQL, and object-oriented programming. It was a valuable learning experience that enhanced my knowledge and problem-solving abilities.
-
-## Contributing
-Contributions to the Simple Banking System project are welcome. If you would like to contribute, please follow these guidelines:
-
-1. Fork the repository.
-2. Create a new branch for your feature or bug fix.
-3. Make your modifications.
-4. Test your changes to ensure they work as intended.
-5. Commit your changes and push them to your forked repository.
-6. Submit a pull request, describing the changes you made and their purpose.
-
-## Dependencies
-The Simple Banking System project has the following dependencies:
-
-1. Java Development Kit (JDK): Ensure that you have a compatible JDK installed. Make sure you have JDK version 17.0 or higher installed. You can download the latest JDK from the [official Oracle website](https://www.oracle.com/java/technologies/downloads/#java17).
-2. SQLite JDBC Driver: Obtain the driver from a reliable source and include it in the project's classpath. The recommended version is 3.41.2. You can download the JDBC driver from the [SQLite JDBC Driver website](https://github.com/xerial/sqlite-jdbc/releases) or include it as a Maven/Gradle dependency.
-
-## Contact Information
-If you have any questions or concerns regarding the Simple Banking System project, please contact the project maintainer:
-- Name: ```Serik Makzhanov```
-- Email: ```serik.makzhanov@gmail.com```
+java -jar Project5SimpleBankingSystem-1.0-SNAPSHOT.jar
 ```
 2. Следуйте инструкциям на экране: Программа отобразит меню с различными опциями. Введите соответствующий номер, чтобы выполнить желаемое действие.
 
@@ -112,36 +56,9 @@ If you have any questions or concerns regarding the Simple Banking System projec
 
 В целом, этот проект дал мне практическое представление о банковских системах и позволил развить свои навыки работы с базами данных, SQL и объектно-ориентированным программированием. Это был ценный учебный опыт, который расширил мои знания и способности к решению проблем.
 2. Follow the on-screen instructions: The program will display a menu with different options. Enter the corresponding number to perform the desired action.
-3. 
-## Feedback
-During this project, I learned about the functioning of a banking system and gained knowledge about SQL and databases. Understanding how the Luhn algorithm works was particularly valuable in preventing errors when entering card numbers. Additionally, I grasped basic object-oriented programming concepts, such as working with classes.
 
-While working on the project, I encountered a few difficulties. Setting up and connecting to the database required some effort, but I was able to overcome it by studying the documentation and seeking guidance from online resources. Designing the system to handle various banking operations and ensuring data security also posed challenges, but careful planning and research helped me overcome these obstacles.
-
-Overall, this project provided me with a practical understanding of banking systems and allowed me to develop my skills in working with databases, SQL, and object-oriented programming. It was a valuable learning experience that enhanced my knowledge and problem-solving abilities.
-
-## Contributing
-Contributions to the Simple Banking System project are welcome. If you would like to contribute, please follow these guidelines:
-
-1. Fork the repository.
-2. Create a new branch for your feature or bug fix.
-3. Make your modifications.
-4. Test your changes to ensure they work as intended.
-5. Commit your changes and push them to your forked repository.
-6. Submit a pull request, describing the changes you made and their purpose.
-
-## Dependencies
-The Simple Banking System project has the following dependencies:
-
-1. Java Development Kit (JDK): Ensure that you have a compatible JDK installed. Make sure you have JDK version 17.0 or higher installed. You can download the latest JDK from the [official Oracle website](https://www.oracle.com/java/technologies/downloads/#java17).
-2. SQLite JDBC Driver: Obtain the driver from a reliable source and include it in the project's classpath. The recommended version is 3.41.2. You can download the JDBC driver from the [SQLite JDBC Driver website](https://github.com/xerial/sqlite-jdbc/releases) or include it as a Maven/Gradle dependency.
-
-## Contact Information
-If you have any questions or concerns regarding the Simple Banking System project, please contact the project maintainer:
-- Name: ```Serik Makzhanov```
-- Email: ```serik.makzhanov@gmail.com```
-## Способствующий
-Приветствуются взносы в проект "Простая банковская система". Если вы хотите внести свой вклад, пожалуйста, следуйте этим рекомендациям:
+## Для тех, кто хочет внести вклад в программу
+Приветствуются улучшения работы проекта "Простая банковская система". Если вы хотите предложить изменения, которые могут улучшить работу проекта, пожалуйста, следуйте этим рекомендациям:
 
 1. Создайте новую ветвь репозитория.
 2. Создайте новую ветку для вашей функции или исправления ошибки.
