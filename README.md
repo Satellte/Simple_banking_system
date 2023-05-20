@@ -29,7 +29,7 @@ The Simple Banking System offers the following features:
 ### To run the Simple Banking System project, follow these steps:
 
 1. Set up the database: The project uses an SQLite database. Ensure that the SQLite JDBC driver is installed.
-2. Download the project files: Obtain the project files from the provided link.
+2. Download the project files: Clone the project files or obtain from the provided link.
 3. Compile the project: Compile the Java classes using a Java compiler.
 4. Run the project: Execute the compiled Main class, providing the optional command-line argument -fileName to specify the database file name. If no file name is provided, the default file name will be used.
 5. Follow the on-screen instructions: The program will display a menu with different options. Enter the corresponding number to perform the desired action.
