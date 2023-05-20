@@ -5,8 +5,21 @@ import java.util.Scanner;
 import static Modified.BL.businessLogic.*;
 import static Modified.DAO.Bank.*;
 
+/**
+ * The DisplayInterface class is a user interface for the banking system.
+ * It provides various methods of input and output of user information
+ */
 public class DisplayInterface {
+    /**
+     * The scanner is used as a general method of reading the information entered by the user
+     */
     public static Scanner scanner = new Scanner(System.in);
+    /**
+     * printMainMenu displays the starting menu options:
+     * Create an account
+     * Log into account
+     * Exit
+     */
     public static void printMainMenu() throws SQLException {
         System.out.println("""
                 1. Create an account
@@ -15,6 +28,11 @@ public class DisplayInterface {
         int select = scanner.nextInt();
         mainMenuSelection(select);
     }
+    /**
+     * printNewGeneratedAccount displays the generated card number and pin
+     * @param cardNumber is new generated card number
+     * @param pin is new generated pin
+     */
     public static void printNewGeneratedAccount(String cardNumber, StringBuilder pin){
         System.out.println();
         System.out.println("\nYour card has been created\n" +
@@ -23,6 +41,9 @@ public class DisplayInterface {
                 "\nYour card PIN:\n" +
                 pin + "\n");
     }
+    /**
+     * loginScreen offers user to enter the card number and pin to log in
+     */
     public static void loginScreen() throws SQLException {
         System.out.println("\nEnter your card number:");
         long cardNumber = scanner.nextLong();
@@ -35,6 +56,16 @@ public class DisplayInterface {
             printMainMenu();
         }
     }
+    /**
+     * printLoginMenu displays the login menu options:
+     * Balance
+     * Add income
+     * Do transfer
+     * Close account
+     * Log out
+     * Exit
+     * @param currentCard is the card number entered by user in the loginScreen
+     */
     public static void printLoginMenu(String currentCard) throws SQLException {
         System.out.println();
         System.out.println("""
@@ -47,14 +78,24 @@ public class DisplayInterface {
         int select = scanner.nextInt();
         loginMenuSelection(currentCard, select);
     }
+    /**
+     * printBalance display to user current balance
+     * @param balance is account balance from database
+     */
     public static void printBalance(String balance){
         System.out.println();
         System.out.println("Balance: " + balance + "\n");
     }
+    /**
+     * printInvitationToTransfer display invitation to user to enter the receiver's card number
+     */
     public static void printInvitationToTransfer(){
         System.out.println("Transfer\n" +
                 "Enter card number:");
     }
+    /**
+     * printMessage display frequently used messages
+     */
     public static void printMessage(int code){
         switch (code) {
         case 1 -> System.out.println("Success");
