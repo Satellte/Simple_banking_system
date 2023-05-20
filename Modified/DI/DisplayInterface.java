@@ -107,6 +107,5 @@ public class DisplayInterface {
         case 8 -> System.out.println("Enter how much money you want to transfer:");
         case 9 -> System.out.println("Enter income:");
         }
-
     }
 }
