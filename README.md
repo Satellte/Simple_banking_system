@@ -19,7 +19,7 @@ This is a simple banking system project implemented in Java. The project aims to
 ## Features
 The Simple Banking System offers the following features:
 1. Account Creation: Users can create a new account, which includes generating a unique card number that is being verified by Luhn algorithm and a PIN code.
-2. Account Login: Users can log into their existing accounts using existing in database card number and PIN.
+2. Account Login: Users can log into their accounts using existing in database card number and PIN.
 3. Balance Inquiry: Logged-in users can check their account balance.
 4. Income Addition: Logged-in users can add income to their account.
 5. Fund Transfer: Logged-in users can transfer funds from their account to another existing in database, account.
