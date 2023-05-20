@@ -147,15 +147,17 @@ public class businessLogic {
             case 3 -> {
                 printInvitationToTransfer();
                 long recipientsCard = scanner.nextLong();
-                if (queryCheckingCardInBase(String.valueOf(recipientsCard))){
-                    printMessage(8);
-                    long amountToTransfer = scanner.nextLong();
-                    if (queryCheckAvailableAmount(currentCard, amountToTransfer)) {
-                        connect();
-                        doTransfer(currentCard, String.valueOf(recipientsCard), String.valueOf(amountToTransfer));
-                        closeConnection();
-                        printMessage(1);
-                    } else printMessage(5);
+                if (currentCard.equals(String.valueOf(recipientsCard))){
+                    if (queryCheckingCardInBase(String.valueOf(recipientsCard))) {
+                        printMessage(8);
+                        long amountToTransfer = scanner.nextLong();
+                        if (queryCheckAvailableAmount(currentCard, amountToTransfer)) {
+                            connect();
+                            doTransfer(currentCard, String.valueOf(recipientsCard), String.valueOf(amountToTransfer));
+                            closeConnection();
+                            printMessage(1);
+                        } else printMessage(5);
+                    } else printMessage(2);
                 } else printMessage(2);
                 printLoginMenu(currentCard);
             }
