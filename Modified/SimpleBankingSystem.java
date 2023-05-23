@@ -2,8 +2,11 @@ package Modified;
 
 import java.sql.SQLException;
 
-import static Modified.DAO.Bank.*;
-import static Modified.DI.DisplayInterface.printMainMenu;
+import static Modified.DAO.Bank.setUrlToBase;
+import static Modified.DAO.Bank.connect;
+import static Modified.DAO.Bank.queryForCreateTable;
+import static Modified.DAO.Bank.closeConnection;
+import static Modified.View.View.printMainMenu;
 
 /**
  * The SimpleBankingSystem class represents a simple banking system program.

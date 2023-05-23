@@ -1,4 +1,4 @@
-package Modified.BL;
+package Modified.Service;
 
 import java.sql.SQLException;
 import java.util.Random;
@@ -11,20 +11,16 @@ import static Modified.DAO.Bank.queryCheckAvailableAmount;
 import static Modified.DAO.Bank.queryCheckingCardInBase;
 import static Modified.DAO.Bank.doTransfer;
 import static Modified.DAO.Bank.closeAccount;
-import static Modified.DI.DisplayInterface.printMessage;
-import static Modified.DI.DisplayInterface.printMainMenu;
-import static Modified.DI.DisplayInterface.printLoginMenu;
-import static Modified.DI.DisplayInterface.loginScreen;
-import static Modified.DI.DisplayInterface.printNewGeneratedAccount;
-import static Modified.DI.DisplayInterface.printInvitationToTransfer;
-import static Modified.DI.DisplayInterface.scanner;
+import static Modified.DAO.Bank.queryCheckingCardAndPinInBase;
+import static Modified.View.View.*;
+
 
 /**
  * businessLogic is a class that performs data generation,
  * validation, switching between different menus
  * and calling methods for database operation
  */
-public class businessLogic {
+public class Service {
     /**
      * mainMenuSelection depending on the user's choice
      * calls the methods of card generation and pin or login invitation
@@ -146,7 +142,7 @@ public class businessLogic {
         switch (selection) {
             case 1 -> {
                 connect();
-                queryForPrintBalance(currentCard);
+                printBalance(queryForPrintBalance(currentCard));
                 closeConnection();
                 printLoginMenu(currentCard);
             }
@@ -191,5 +187,9 @@ public class businessLogic {
                 printLoginMenu(currentCard);
             }
         }
+    }
+
+    public static boolean checkCardAndPinInBase(String cardNumber, String pin) throws SQLException {
+        return (queryCheckingCardAndPinInBase(cardNumber, pin));
     }
 }

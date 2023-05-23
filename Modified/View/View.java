@@ -1,16 +1,16 @@
-package Modified.DI;
+package Modified.View;
 
 import java.sql.SQLException;
 import java.util.Scanner;
-import static Modified.BL.businessLogic.mainMenuSelection;
-import static Modified.BL.businessLogic.loginMenuSelection;
-import static Modified.DAO.Bank.queryCheckingCardAndPinInBase;
+import static Modified.Service.Service.mainMenuSelection;
+import static Modified.Service.Service.loginMenuSelection;
+import static Modified.Service.Service.checkCardAndPinInBase;
 
 /**
  * The DisplayInterface class is a user interface for the banking system.
  * It provides various methods of input and output of user information
  */
-public class DisplayInterface {
+public class View {
     /**
      * The scanner is used as a general method of reading the information entered by the user
      */
@@ -50,7 +50,7 @@ public class DisplayInterface {
         long cardNumber = scanner.nextLong();
         System.out.println("Enter your PIN:");
         int pin = scanner.nextInt();
-        if (queryCheckingCardAndPinInBase(String.valueOf(cardNumber), String.valueOf(pin))){
+        if (checkCardAndPinInBase(String.valueOf(cardNumber), String.valueOf(pin))){
             printLoginMenu(String.valueOf(cardNumber));
         } else {
             printMessage(2);

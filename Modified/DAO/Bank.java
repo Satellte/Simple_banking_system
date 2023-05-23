@@ -1,8 +1,6 @@
 package Modified.DAO;
 
 import java.sql.*;
-import static Modified.DI.DisplayInterface.printBalance;
-import static Modified.DI.DisplayInterface.printMessage;
 
 /**
  * Bank class is created connection to database with accounts,
@@ -71,11 +69,11 @@ public static String pathToBase;
      * queryForPrintBalance create query for checking balance
      * @param cardNumber is logged card number
      */
-    public static void queryForPrintBalance(String cardNumber) throws SQLException {
+    public static String queryForPrintBalance(String cardNumber) throws SQLException {
         long balance;
         String query = "SELECT Balance FROM HyperSkill WHERE " + "CardNumber = " + cardNumber + ";";
         balance = returnBalance(query);
-        printBalance(String.valueOf(balance));
+        return (String.valueOf(balance));
     }
 
     /**
@@ -139,8 +137,6 @@ public static String pathToBase;
         connect();
         if (checkingBase(query)){
             exist = true;
-        } else {
-            printMessage(2);
         }
         closeConnection();
         return exist;
