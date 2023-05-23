@@ -2,8 +2,22 @@ package Modified.BL;
 
 import java.sql.SQLException;
 import java.util.Random;
-import static Modified.DAO.Bank.*;
-import static Modified.DI.DisplayInterface.*;
+import static Modified.DAO.Bank.connect;
+import static Modified.DAO.Bank.queryForAddAccount;
+import static Modified.DAO.Bank.closeConnection;
+import static Modified.DAO.Bank.queryForPrintBalance;
+import static Modified.DAO.Bank.queryToAddIncome;
+import static Modified.DAO.Bank.queryCheckAvailableAmount;
+import static Modified.DAO.Bank.queryCheckingCardInBase;
+import static Modified.DAO.Bank.doTransfer;
+import static Modified.DAO.Bank.closeAccount;
+import static Modified.DI.DisplayInterface.printMessage;
+import static Modified.DI.DisplayInterface.printMainMenu;
+import static Modified.DI.DisplayInterface.printLoginMenu;
+import static Modified.DI.DisplayInterface.loginScreen;
+import static Modified.DI.DisplayInterface.printNewGeneratedAccount;
+import static Modified.DI.DisplayInterface.printInvitationToTransfer;
+import static Modified.DI.DisplayInterface.scanner;
 
 /**
  * businessLogic is a class that performs data generation,

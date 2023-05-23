@@ -2,8 +2,9 @@ package Modified.DI;
 
 import java.sql.SQLException;
 import java.util.Scanner;
-import static Modified.BL.businessLogic.*;
-import static Modified.DAO.Bank.*;
+import static Modified.BL.businessLogic.mainMenuSelection;
+import static Modified.BL.businessLogic.loginMenuSelection;
+import static Modified.DAO.Bank.queryCheckingCardAndPinInBase;
 
 /**
  * The DisplayInterface class is a user interface for the banking system.

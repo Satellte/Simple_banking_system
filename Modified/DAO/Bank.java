@@ -1,7 +1,8 @@
 package Modified.DAO;
 
 import java.sql.*;
-import static Modified.DI.DisplayInterface.*;
+import static Modified.DI.DisplayInterface.printBalance;
+import static Modified.DI.DisplayInterface.printMessage;
 
 /**
  * Bank class is created connection to database with accounts,
