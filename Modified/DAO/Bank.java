@@ -1,6 +1,10 @@
 package Modified.DAO;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.DriverManager;
+import java.sql.Statement;
+import java.sql.ResultSet;
 
 /**
  * Bank class is created connection to database with accounts,
